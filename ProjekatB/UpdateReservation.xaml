@@ -1,0 +1,146 @@
+﻿<Window x:Class="ProjekatB.UpdateReservation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatB"
+        mc:Ignorable="d"
+        x:Name="wind"
+        WindowStartupLocation="CenterScreen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:lex="http://wpflocalizeextension.codeplex.com"
+        lex:LocalizeDictionary.DesignCulture="sr"
+        lex:ResxLocalizationProvider.DefaultAssembly="ProjekatB"
+        lex:ResxLocalizationProvider.DefaultDictionary="Strings"
+        Height="650" Width="496">
+
+    <StackPanel Grid.IsSharedSizeScope="True">
+        <Grid Background="#FFFFFF" Margin="20 10" MaxWidth="600">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock FontFamily="Montserrat" Grid.Row="0"
+                  
+                   Text="{lex:Loc Information}"
+                   FontSize="30"
+                   Margin="0 25 0 0"
+                   />
+            <Grid Grid.Row="1" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock  FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc Id}" FontSize="18"/>
+                <TextBox BorderBrush="DarkGray" BorderThickness="0 0 0 1" Grid.Row="1"
+                     Margin="0 5 0 0"
+                         Name="Id"
+                     />
+            </Grid>
+            <Grid Grid.Row="2" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock  FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc FirstName }" FontSize="18"/>
+                <TextBox BorderBrush="DarkGray" BorderThickness="0 0 0 1" Grid.Row="1"
+                     Margin="0 5 0 0"
+                         Name="firstName"
+                     />
+            </Grid>
+            <Grid Grid.Row="3" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc LastName}" FontSize="18"/>
+                <TextBox BorderBrush="DarkGray" BorderThickness="0 0 0 1" Grid.Row="1"
+                         Name="lastName"
+                     Margin="0 5 0 0"
+              
+                    />
+            </Grid>
+            <Grid Grid.Row="4" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc GuestID2}" FontSize="18"/>
+                <TextBox  BorderBrush="DarkGray" BorderThickness="0 0 0 1" Grid.Row="1"
+                         Name="Jmb"
+                     Margin="0 5 0 0"
+                     />
+            </Grid>
+            <Grid Grid.Row="5" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc RoomName2}" FontSize="18"/>
+                <TextBox BorderBrush="DarkGray" BorderThickness="0 0 0 1" Grid.Row="1"
+                         Name="Room"
+                     Margin="0 5 0 0"
+                   />
+
+            </Grid>
+            <Grid Grid.Row="6" Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <TextBlock  FontFamily="Montserrat" Grid.Column="0" Margin="0 5 0 0" Text="{lex:Loc Start}" FontSize="18"/>
+                    <DatePicker Style="{StaticResource MaterialDesignDatePicker}" materialDesign:ColorZoneAssist.Mode="Light"  BorderThickness="0 0 0 1" Name="dateFrom" Grid.Column="0"
+                     Margin="0 5 0 0"
+                     Background="White"
+                     SelectedDate="{Binding dateFrom, UpdateSourceTrigger=PropertyChanged}">
+                        <DatePicker.CalendarStyle>
+                            <Style TargetType="Calendar" BasedOn="{StaticResource MaterialDesignCalendarPortrait}">
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                                <Style.Resources>
+                                    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="Orange" />
+                                    <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="Orange" />
+                                </Style.Resources>
+                            </Style>
+                        </DatePicker.CalendarStyle>
+                    </DatePicker>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock  FontFamily="Montserrat" Grid.Column="1" Margin="0 5 0 0" Text="{lex:Loc End}" FontSize="18"/>
+                    <DatePicker
+                        Name="dateTo"
+                        Background="White"
+                        materialDesign:ColorZoneAssist.Mode="Light"
+                     Margin="0 5 0 0"
+                     SelectedDate="{Binding dateTo}">
+                        <DatePicker.CalendarStyle>
+                            <Style TargetType="Calendar" BasedOn="{StaticResource MaterialDesignCalendarPortrait}">
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                                <Style.Resources>
+                                    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="Orange" />
+                                    <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="Orange" />
+                                </Style.Resources>
+                            </Style>
+                        </DatePicker.CalendarStyle>
+                    </DatePicker>
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Row="7" Orientation="Horizontal" Margin="0 25 0 0">
+                <Button Click="submit_click" Name="btn_submit" Command="{Binding SubmitCommand}" Content="{lex:Loc Submit}"/>
+                <Button Click="cancel_click" Name="btn_cancel" Command="{Binding CancelCommand}" Margin="15 0 0 0" Content="{lex:Loc Cancel}"/>
+
+            </StackPanel>
+
+        </Grid>
+    </StackPanel>
+
+</Window>

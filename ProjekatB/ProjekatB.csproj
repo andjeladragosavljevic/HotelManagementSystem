@@ -1,0 +1,122 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Img\248689247_164713029134972_4565022416117486615_n.jpg" />
+    <None Remove="Img\264234976_230072125969326_2548973470862568816_n %281%29.png" />
+    <None Remove="Img\271067386_2789666924667009_5060533989489182717_n.png" />
+    <None Remove="Img\271312487_350248663282207_402271128800898655_n.png" />
+    <None Remove="Img\271393631_1576454872717117_4644271590673016886_n.png" />
+    <None Remove="Img\bill-orange.png" />
+    <None Remove="Img\bill.png" />
+    <None Remove="Img\categories-orange.png" />
+    <None Remove="Img\category.png" />
+    <None Remove="Img\guests-orange.png" />
+    <None Remove="Img\guests.png" />
+    <None Remove="Img\home-orange.png" />
+    <None Remove="Img\home.png" />
+    <None Remove="Img\hotel_guests.jpg" />
+    <None Remove="Img\HS ICON.png" />
+    <None Remove="Img\logout-orange.png" />
+    <None Remove="Img\profile-orange.png" />
+    <None Remove="Img\reservation-orange.png" />
+    <None Remove="Img\rooms-orange.png" />
+    <None Remove="Img\rooms.png" />
+    <None Remove="Img\settings-orange.png" />
+    <None Remove="Img\status_weather_few_clouds.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Img\248689247_164713029134972_4565022416117486615_n.jpg" />
+    <Resource Include="Img\264234976_230072125969326_2548973470862568816_n (1).png" />
+    <Resource Include="Img\bill-orange.png" />
+    <Resource Include="Img\categories-orange.png" />
+    <Resource Include="Img\guests-orange.png" />
+    <Resource Include="Img\home-orange.png" />
+    <Resource Include="Img\logout-orange.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FastMember" Version="1.5.0" />
+    <PackageReference Include="MaterialDesignColors" Version="2.0.4" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
+    <PackageReference Include="MySql.Data" Version="8.0.27" />
+    <PackageReference Include="Syncfusion.Shared.WPF" Version="19.4.0.42" />
+    <PackageReference Include="WPFLocalizeExtension" Version="3.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Img\271067386_2789666924667009_5060533989489182717_n.png" />
+    <Resource Include="Img\271312487_350248663282207_402271128800898655_n.png" />
+    <Resource Include="Img\271393631_1576454872717117_4644271590673016886_n.png" />
+    <Resource Include="Img\bill.png" />
+    <Resource Include="Img\category.png" />
+    <Resource Include="Img\guests.png" />
+    <Resource Include="Img\home.png" />
+    <Resource Include="Img\hotel_guests.jpg" />
+    <Resource Include="Img\HS ICON.png" />
+    <Resource Include="Img\profile-orange.png" />
+    <Resource Include="Img\reservation-orange.png" />
+    <Resource Include="Img\rooms-orange.png" />
+    <Resource Include="Img\rooms.png" />
+    <Resource Include="Img\settings-orange.png" />
+    <Resource Include="Img\status_weather_few_clouds.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Strings.sr-Latn-RS.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Strings.sr-Latn-RS.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Settings1.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Strings.sr-Latn-RS.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.sr-Latn-RS.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Settings1.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

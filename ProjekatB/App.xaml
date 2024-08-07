@@ -1,0 +1,45 @@
+﻿<Application x:Class="ProjekatB.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:ProjekatB"
+             xmlns:ViewModel="clr-namespace:ProjekatB.ViewModel"
+             xmlns:View="clr-namespace:ProjekatB.View"  
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <DataTemplate DataType="{x:Type ViewModel:HomeViewModel}">
+                <View:HomeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModel:RoomsViewModel}">
+                <View:RoomsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModel:CategoryViewModel}">
+                <View:CategoryView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModel:BillViewModel}">
+                <View:BillView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModel:GuestsRoomsViewModel}">
+                <View:GuestsRoomsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModel:ReservationsViewModel}">
+                <View:ReservationsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModel:GuestsViewModel}">
+                <View:GuestsView/>
+            </DataTemplate>
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary Source="/Themes/Light.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Orange.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

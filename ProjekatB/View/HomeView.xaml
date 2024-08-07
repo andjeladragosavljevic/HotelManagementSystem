@@ -1,0 +1,129 @@
+﻿<UserControl x:Class="ProjekatB.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:ProjekatB.View"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+         lex:LocalizeDictionary.DesignCulture="sr"
+        lex:ResxLocalizationProvider.DefaultAssembly="ProjekatB"
+        lex:ResxLocalizationProvider.DefaultDictionary="Strings"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+        <Grid Style="{DynamicResource backgroundStyle}" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Menu  Height="70" Margin="0 20 5 0" Background="Transparent"  HorizontalAlignment="Right" VerticalAlignment="top">
+                <MenuItem  Height="63" Width="74">
+
+                    <MenuItem.Icon>
+                        <Image Style="{DynamicResource imgSettings}"  Height="{Binding Header.ActualHeight, ElementName=menuItem1}"
+                Width="{Binding Header.ActualHeight, ElementName=menuItem1}" Margin="0,-10,-27,-8" />
+                    </MenuItem.Icon>
+
+
+                    <MenuItem Style="{DynamicResource menuBackground}" Click="Settings_Click" Uid="0" Header="{lex:Loc DarkTheme}"/>
+                    <MenuItem Style="{DynamicResource menuBackground}" Click="Settings_Click" Uid="1" Header="{lex:Loc BlueTheme}"/>
+                    <MenuItem Style="{DynamicResource menuBackground}" Click="Settings_Click" Uid="2" Header="{lex:Loc LightTheme}"/>
+                <MenuItem Style="{DynamicResource menuBackground}" Click="Settings_Click" Uid="3" Header="{lex:Loc English}"/>
+                <MenuItem Style="{DynamicResource menuBackground}" Click="Settings_Click" Uid="4" Header="{lex:Loc Serbian}"/>
+
+            </MenuItem>
+                <MenuItem Click="Profile_Click" Height="63" Width="77">
+
+                    <MenuItem.Icon>
+                        <Image Style="{DynamicResource imgProfile}"  Height="{Binding Header.ActualHeight, ElementName=menuItem1}"
+                Width="{Binding Header.ActualHeight, ElementName=menuItem1}" Margin="0,-10,-27,-8" RenderTransformOrigin="-0.353,0.333" />
+                    </MenuItem.Icon>
+
+                </MenuItem>
+
+                <MenuItem Click="logout" Height="63" Width="78">
+
+                    <MenuItem.Icon>
+                        <Image Style="{DynamicResource imgLogout}"  Height="{Binding Header.ActualHeight, ElementName=menuItem1}"
+                Width="{Binding Header.ActualHeight, ElementName=menuItem1}" Margin="0,-10,-27,-8" />
+                    </MenuItem.Icon>
+
+                </MenuItem>
+
+            </Menu>
+            <TextBox IsEnabled="False" TextChanged="textBox1_TextChanged" VerticalAlignment="Top" Grid.Row="0" Width="250"
+                      
+                     Height="40"
+                     FontSize="11"
+                           x:Name="textBox1"
+                           HorizontalAlignment="Left"
+                           Margin="0,35,5,0"
+                     Style="{DynamicResource TextboxStyle}">
+            </TextBox>
+            <Border SnapsToDevicePixels="True" Grid.Row="0" Grid.Column="2" Margin="0 0 0 3" VerticalAlignment="Bottom" Background="#434551" Height="2" Width="auto"/>
+            <Border Grid.Row="1" Style="{DynamicResource borderdStyle}">
+
+            <StackPanel x:Name="Discover" Orientation="Vertical">
+                <TextBlock
+                Text="{lex:Loc Discover}"
+                Style="{DynamicResource hms}"
+                FontSize="30"
+                HorizontalAlignment="Left"
+                Margin="20 20 0 20"
+                FontFamily="Montserrat">
+                </TextBlock>
+
+                <Border Style="{DynamicResource bigBorder}"
+                    Width="590"
+                    Height="167"
+                    
+                    HorizontalAlignment="Left"
+                    Margin="20"
+                    CornerRadius="10">
+                    <StackPanel Margin="10">
+                        <StackPanel.Background>
+                            <ImageBrush ImageSource="\Img\hotel_guests.jpg"/>
+                        </StackPanel.Background>
+                        <TextBox BorderThickness="0" Text="Hotel Management System" FontSize="25" FontFamily="Montserrat" Foreground="Orange"/>
+                        <!--  <TextBox BorderThickness="0" Text="System" FontSize="25" FontFamily="Montserrat" Foreground="DarkOrange"/>-->
+                    </StackPanel>
+                </Border>
+                <StackPanel Orientation="Horizontal">
+                    <Border
+                    Width="286"
+                    Height="124"
+                    Background="#FFA333"
+                    Margin="20"
+                    CornerRadius="10">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <TextBlock Foreground="White" x:Name="txtTime" VerticalAlignment="Center"  HorizontalAlignment="Center" FontFamily="Montserrat" FontSize="24"/>
+                           
+                                <Button Foreground="White" BorderThickness="0" VerticalAlignment="Center" Background="Transparent" Click="txtDate_Click" HorizontalAlignment="Center" FontSize="18" x:Name="txtDate" FontFamily="Montserrat"/>
+                            
+                        </StackPanel>
+                    </Border>
+                    <Border 
+                    Width="286"
+                    Height="124"
+                    Background="Orange"
+                   
+                    CornerRadius="10" >
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel  Margin="0 0 20 0" Orientation="Horizontal" HorizontalAlignment="Right" Width="150" Height="100">
+                                <StackPanel.Background>
+                                    <ImageBrush ImageSource="\Img\status_weather_few_clouds.png"/>
+                                </StackPanel.Background>
+                                <TextBlock Margin="-70 0 0 5" VerticalAlignment="Center" x:Name="txtTemp" Foreground="White" FontFamily="Montserrat" FontSize="24"/>
+                            </StackPanel>
+                            <TextBlock HorizontalAlignment="Center" Margin="10 0 0 10" x:Name="txtLocation" Foreground="White" FontFamily="Montserrat" FontSize="12"/>
+                        </StackPanel>
+
+                    </Border>
+                </StackPanel>
+
+
+            </StackPanel>
+
+        </Border>
+    </Grid>
+</UserControl>

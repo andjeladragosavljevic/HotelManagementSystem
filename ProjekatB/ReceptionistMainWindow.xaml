@@ -1,0 +1,72 @@
+﻿<Window x:Class="ProjekatB.ReceptionistMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatB"
+        xmlns:lex="http://wpflocalizeextension.codeplex.com"
+        lex:LocalizeDictionary.DesignCulture="sr"
+        lex:ResxLocalizationProvider.DefaultAssembly="ProjekatB"
+        lex:ResxLocalizationProvider.DefaultDictionary="Strings"
+        xmlns:viewModel="clr-namespace:ProjekatB.ViewModel"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        MaxHeight="950"
+        x:Name="main"
+        Height="650" Width="950">
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    <Border Style="{DynamicResource borderdStyle}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="210"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border SnapsToDevicePixels="True" Grid.Column="1" VerticalAlignment="Top" Background="#434551" Grid.ColumnSpan="2" Height="2" Width="auto" Margin="0 140 0 0 "/>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+
+                <StackPanel Grid.Row="0" Orientation="Vertical">
+                    <Image HorizontalAlignment="Center" Margin="0 15 0 0" Height="80" Source="\Img\HS ICON.png"/>
+                    <TextBlock Margin="10" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" Text="HOTEL MENAGEMEN SYSTEM" HorizontalAlignment="Center" Style="{DynamicResource hms}" FontSize="10"  FontFamily="Montserrat" FontWeight="Bold"/>
+
+                </StackPanel>
+                <Border SnapsToDevicePixels="True" Grid.Row="1" VerticalAlignment="Top" Background="#434551" Height="2" Width="auto" Margin="0 20 0 0 "/>
+
+                <StackPanel Margin="20,40,10,20" Grid.Row="1">
+
+                    <StackPanel Margin="0 0 0 15" Orientation="Horizontal">
+                        <Image Margin="5 0 0 0" Height="30" Width="30" Style="{DynamicResource imgHome}"/>
+                        <Button x:Name="Home" Margin="10 0 0 0"  FontSize="18"  Command="{Binding HomeViewCommand}" Content="{lex:Loc Home}" Style="{DynamicResource MenuButton}"/>
+
+                    </StackPanel>
+                    <StackPanel Margin="0  0 0 15" Orientation="Horizontal">
+                        <Image Margin="5 0 0 0" Height="30" Width="30" Style="{DynamicResource imgRooms}"/>
+                        <Button x:Name="Rooms" Margin="10 0 0 0" FontSize="18" Command="{Binding RoomsViewCommand}"  Content="{lex:Loc Rooms}" Style="{DynamicResource MenuButton}"/>
+
+                    </StackPanel>
+                    <StackPanel Margin="0 0 0 15" Orientation="Horizontal">
+                        <Image Margin="5 0 0 0" Height="30" Width="30" Style="{DynamicResource imgCat}"/>
+                        <Button x:Name="Categories" Margin="10 0 0 0" FontSize="18" Command="{Binding CategoryViewCommand}"  Content="{lex:Loc Categories}" Style="{DynamicResource MenuButton}"/>
+                    </StackPanel>
+                    <StackPanel Margin="0 0 0 15" Orientation="Horizontal">
+                        <Image Margin="5 0 0 0" Height="30" Width="30" Style="{DynamicResource imgGuests}"/>
+                        <Button x:Name="Guests" Margin="10 0 0 0" FontSize="18" Command="{Binding GuestsViewCommand}"  Content="{lex:Loc Guests}" Style="{DynamicResource MenuButton}"/>
+                    </StackPanel>
+                    <StackPanel Margin="0 0 0 15" Orientation="Horizontal">
+                        <Image Margin="5 0 0 0" Height="30" Width="30" Style="{DynamicResource imgBill}"/>
+                        <Button x:Name="Bill" Margin="10 0 0 0" FontSize="18" Command="{Binding BillViewCommand}"  Content="{lex:Loc Bill}" Style="{DynamicResource MenuButton}"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <ContentControl Margin="20 25 20 20"  Grid.Column="1" Content="{Binding CurrentView}"/>
+
+        </Grid>
+    </Border>
+</Window>

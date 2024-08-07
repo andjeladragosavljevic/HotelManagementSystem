@@ -1,0 +1,291 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                     xmlns:lex="http://wpflocalizeextension.codeplex.com"
+                    >
+    <Style x:Key="calendar" TargetType="Calendar" BasedOn="{StaticResource MaterialDesignCalendarPortrait}">
+        <Setter Property="Background" Value="#303030"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Style.Resources>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="Orange" />
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="Orange" />
+
+        </Style.Resources>
+    </Style>
+    <Style x:Key="MaterialDesignFont" TargetType="ComboBoxItem">
+        <Setter Property="Foreground" Value="White"/>
+      
+    </Style>
+
+    <Style TargetType="ContentControl" x:Key="content">
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <Style x:Key="cmb" TargetType="ComboBox" BasedOn="{StaticResource MaterialDesignComboBox}" >
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="TextElement.Foreground" Value="White"/>
+        <Style.Resources>
+            <SolidColorBrush x:Key="MaterialDesignPaper" Color="#303030"/>
+           
+            </Style.Resources>
+       
+    </Style>
+    <Style x:Key="backgroundStyle" TargetType="Grid">
+        <Setter Property="Background" Value="#303030"/>
+    </Style>
+    <Style x:Key="borderdStyle" TargetType="Border">
+        <Setter Property="Background" Value="#303030"/>
+    </Style>
+    <Style x:Key="HeaderStyle2" TargetType="DataGridColumnHeader">
+        <Setter Property="Background" Value="{StaticResource HeaderBrush}" />
+        <Setter Property="Foreground" Value="Black" />
+
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="MinWidth" Value="150" />
+
+        <Setter Property="MinHeight" Value="30" />
+        <Setter Property="Cursor" Value="Hand" />
+
+
+    </Style>
+    <Style x:Key="menuBackground" TargetType="MenuItem">
+        <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignDarkBackground}"/>
+        <Setter Property="Background" Value="{DynamicResource MaterialDesignDarkBackground}"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <Style x:Key="scrollBarColor" TargetType="ScrollBar" >
+        <Setter Property="Foreground" Value="Transparent"/>
+
+    </Style>
+    <Style x:Key="Slova" TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <Style x:Key="catTxtbox" TargetType="TextBox">
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <LinearGradientBrush x:Key="HeaderBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="DarkOrange" Offset="1"/>
+
+        <!--  <GradientStop Color="#FF1D4855" Offset="0.542"/>
+            <GradientStop Color="#FF1D4855" Offset="0.542"/>
+            <GradientStop Color="#FF193A44" Offset="0.526"/>-->
+    </LinearGradientBrush>
+    <Style x:Key="stackpanelStyle" TargetType="StackPanel">
+        <Setter Property="Margin" Value="5 5 30 0"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Orientation" Value="Horizontal"/>
+    </Style>
+    <Style x:Key="HeaderStyleCategory" TargetType="DataGridColumnHeader">
+        <Setter Property="Background" Value="{StaticResource HeaderBrush}" />
+        <Setter Property="Foreground" Value="White" />
+
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="FontWeight" Value="DemiBold"/>
+        <Setter Property="MinHeight" Value="30" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Width" Value="800"/>
+
+    </Style>
+    <Style x:Key="HeaderStyleGuests" TargetType="DataGridColumnHeader" BasedOn="{StaticResource {x:Type DataGridColumnHeader}}">
+        <Setter Property="Background" Value="{StaticResource HeaderBrush}" />
+        <Setter Property="Foreground" Value="White" />
+
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="FontWeight" Value="DemiBold"/>
+        <Setter Property="MinHeight" Value="30" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Width" Value="180"/>
+
+    </Style>
+
+    <Style x:Key="datagridStyle" TargetType="DataGrid" BasedOn="{StaticResource {x:Type DataGrid}}">
+
+        <Setter Property="FontFamily" Value="Montserrat"/>
+        <Setter Property="HeadersVisibility" Value="Column"/>
+        <Setter Property="RowHeight" Value="30"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="gray"/>
+        <Setter Property="GridLinesVisibility" Value="None"/>
+        <Setter Property="AlternationCount" Value="2"/>
+        <Setter Property="AlternatingRowBackground" Value="#4311"/>
+        <Setter Property="Width" Value="900"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="#303030"/>
+
+        <Setter Property="Margin" Value="0 20 5 20"/>
+        <Setter Property="HorizontalScrollBarVisibility" Value="Hidden"/>
+        <Setter Property="IsReadOnly" Value="TRUE"/>
+        <Setter Property="VerticalScrollBarVisibility" Value="AUTO"/>
+
+    </Style>
+    <Style x:Key="dgRowStyle" TargetType="DataGridRow" BasedOn="{StaticResource {x:Type DataGridRow}}">
+        <Setter Property="FontFamily" Value="Montserrat"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="gray"/>
+        <Setter Property="MinWidth" Value="110"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="#303030"/>
+        <Setter Property="Height" Value="30"/>
+
+    </Style>
+
+    <Style x:Key="MenuButton" TargetType="Button">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontFamily" Value="Montserrat"/>
+        <Setter Property="FontSize" Value="14"/>
+
+    </Style>
+    <Style x:Key="bigBorder" TargetType="Border">
+        <Setter Property="Background" Value="White"/>
+    </Style>
+    <Style x:Key="billBorder" TargetType="Border">
+        <Setter Property="Background" Value="White"/>
+
+    </Style>
+    <Style x:Key="tbBill" TargetType="TextBox">
+        <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignLightSeparatorBackground}"/>
+    </Style>
+    <Style x:Key="hms" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <Style x:Key="fg" TargetType="DataGridCell">
+        <Setter Property="Foreground" Value="Gray"/>
+    </Style>
+    <Style x:Key="HeaderStyle" TargetType="DataGridColumnHeader">
+        <Setter Property="Background" Value="{StaticResource HeaderBrush}" />
+        <Setter Property="Foreground" Value="White" />
+
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="MinWidth" Value="110" />
+
+        <Setter Property="MinHeight" Value="30" />
+        <Setter Property="Cursor" Value="Hand" />
+
+
+        
+    </Style>
+    <Style x:Key="imgRes" TargetType="Image">
+        <Setter Property="Source" Value="\Img\264234976_230072125969326_2548973470862568816_n (1).png"/>
+    </Style>
+    <Style x:Key="imgLogout" TargetType="Image">
+        <Setter Property="Source" Value="\Img\271312487_350248663282207_402271128800898655_n.png"/>
+    </Style>
+    <Style x:Key="imgHome" TargetType="Image">
+        <Setter Property="Source" Value="\Img\home.png"/>
+    </Style>
+    <Style x:Key="imgGuests" TargetType="Image">
+        <Setter Property="Source" Value="\Img\guests.png"/>
+    </Style>
+    <Style x:Key="imgCat" TargetType="Image">
+        <Setter Property="Source" Value="\Img\category.png"/>
+    </Style>
+    <Style x:Key="imgBill" TargetType="Image">
+        <Setter Property="Source" Value="\Img\bill.png"/>
+    </Style>
+    <Style x:Key="imgRooms" TargetType="Image">
+        <Setter Property="Source" Value="\Img\rooms.png"/>
+    </Style>
+    <Style x:Key="imgProfile" TargetType="Image">
+        <Setter Property="Source" Value="\Img\271067386_2789666924667009_5060533989489182717_n.png"/>
+    </Style>
+    <Style x:Key="imgSettings" TargetType="Image">
+        <Setter Property="Source" Value="\Img\271393631_1576454872717117_4644271590673016886_n.png"/>
+    </Style>
+    <Style x:Key="catFg" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="white"/>
+    </Style>
+    <Style x:Key="ModernButton" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="#353340" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontFamily" Value="Montserrat"/>
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Margin" Value="3"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="10" Background="{TemplateBinding Background}">
+                        <Grid>
+                            <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="gray" />
+                            <Setter Property="Foreground" Value="DarkGray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="TextboxStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border CornerRadius="10"
+                            Background="#353340"
+                            Width="200" Height="30">
+                        <Grid>
+                            <Rectangle StrokeThickness="1"/>
+                            <TextBox Margin="1"
+                                   
+                                     Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Text, UpdateSourceTrigger=PropertyChanged}"
+                                     BorderThickness="0"
+                                     Background="Transparent"
+                                     VerticalAlignment="Center"
+                                     Padding="5"
+                                     Foreground="#CFCFCF"
+                                     x:Name="SearchBox"/>
+                            <TextBlock IsHitTestVisible="False"
+                                       
+                                       Text="{lex:Loc Search}"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       Margin="10,0,0,0"
+                                       FontSize="11"
+                                       Foreground="DarkGray"
+                                       Grid.Column="1">
+                                <TextBlock.Style>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Text, ElementName=SearchBox}" Value="">
+                                                <Setter Property="Visibility" Value="Visible"/>
+
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                        <Setter Property="Visibility" Value="Hidden"/>
+                                    </Style>
+                                </TextBlock.Style>
+
+                            </TextBlock>
+
+                        </Grid>
+
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

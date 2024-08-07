@@ -1,0 +1,140 @@
+﻿<Window x:Class="ProjekatB.AddRoom"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatB"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        x:Name="wind"
+        WindowStartupLocation="CenterScreen"
+        xmlns:lex="http://wpflocalizeextension.codeplex.com"
+        lex:LocalizeDictionary.DesignCulture="sr"
+        lex:ResxLocalizationProvider.DefaultAssembly="ProjekatB"
+        lex:ResxLocalizationProvider.DefaultDictionary="Strings"
+        Height="600" Width="496">
+    <StackPanel Grid.IsSharedSizeScope="True">
+        <Grid Background="#FFFFFF" Margin="20 10" MaxWidth="600">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0"
+                FontFamily="Montserrat"
+                   Text="{lex:Loc RoomInformation}"
+                   FontSize="30"
+                   Margin="0 25 0 0"
+                   />
+            <Grid Grid.Row="1" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc RoomName2}" FontSize="18"/>
+                <TextBox BorderBrush="DarkGray" BorderThickness="0 0 0 1" x:Name="nametxtBox" Grid.Row="1"
+                     Margin="0 5 0 0"
+                        
+                    />
+            </Grid>
+            <Grid Grid.Row="2" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc Description}" FontSize="18"/>
+                <TextBox BorderBrush="DarkGray" BorderThickness="0 0 0 1" x:Name="descripttxtBox" Grid.Row="1"
+                     Margin="0 5 0 0"
+              
+                    />
+            </Grid>
+            <Grid Grid.Row="3" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc Price}" FontSize="18"/>
+                <TextBox BorderBrush="DarkGray" BorderThickness="0 0 0 1" x:Name="pricetxtBox" Grid.Row="1"
+                     Margin="0 5 0 0"
+              
+                    />
+            </Grid>
+            <Grid Grid.Row="4" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc MaxGuestCapacity}" FontSize="18"/>
+                <TextBox BorderBrush="DarkGray" BorderThickness="0 0 0 1" x:Name="maxCapacitytxtBox" Grid.Row="1"
+                     Margin="0 5 0 0"
+              
+                    />
+            </Grid>
+            <Grid Background="White" Grid.Row="5" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Background="White" FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc Category}" FontSize="18"/>
+                <ComboBox materialDesign:ThemeAssist.Theme="Light" Grid.Row="1" x:Name="cmbCategoryList"  
+                                
+                                 
+                            Width="220"   
+                                Margin="0 5 0 0"    
+                                    FontSize="18"    
+                                    HorizontalAlignment="Left"   
+                                    VerticalAlignment="Top"  
+                                     
+                                    VerticalContentAlignment="Center"  
+                                    Padding="15,0,0,0"   
+                                    Background="White"  
+                                    Foreground="Black"  
+                                    IsEditable="True"   
+                                   
+                    ItemsSource="{Binding}"
+                 >
+                    <ComboBox.ItemContainerStyle>
+                        <Style TargetType="{x:Type ComboBoxItem}">
+                            <Setter Property="Background" Value="White" />
+                            <Setter Property="BorderBrush" Value="White"/>
+                        </Style>
+                    </ComboBox.ItemContainerStyle>
+                </ComboBox>
+            </Grid>
+            <Grid Grid.Row="6" Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Margin="5" Grid.Column="0" Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center" FontFamily="Montserrat" Text="TV"/>
+                    <RibbonCheckBox x:Name="bTV"  HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Margin="5" Grid.Column="1" Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center" FontFamily="Montserrat" Text="Wi-Fi"/>
+                    <RibbonCheckBox x:Name="bWifi" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Margin="5" Grid.Column="2" Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center" FontFamily="Montserrat" Text="{lex:Loc Phone}"/>
+                    <RibbonCheckBox x:Name="bPhone" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Row="7" Orientation="Horizontal" Margin="0 25 0 0">
+                <Button  Name="btn_submit" Click="submit_click"
+                        FontFamily="Montserrat"  Content="{lex:Loc Submit}"/>
+                <Button  Click ="delete_click" FontFamily="Montserrat" Margin="15 0 0 0" Content="{lex:Loc Cancel}"/>
+
+            </StackPanel>
+
+
+        </Grid>
+    </StackPanel>
+
+</Window>

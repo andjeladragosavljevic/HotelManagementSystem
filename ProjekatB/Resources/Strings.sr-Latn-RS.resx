@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>DODAJ</value>
+  </data>
+  <data name="Bill" xml:space="preserve">
+    <value>RAČUN</value>
+  </data>
+  <data name="BillDetails" xml:space="preserve">
+    <value>RAČUN</value>
+  </data>
+  <data name="BlueTheme" xml:space="preserve">
+    <value>Plava tema</value>
+  </data>
+  <data name="Book" xml:space="preserve">
+    <value>REZERVIŠI SOBU</value>
+  </data>
+  <data name="Booked" xml:space="preserve">
+    <value>Soba je uspjšeno rezervisana!</value>
+  </data>
+  <data name="BookedAlr" xml:space="preserve">
+    <value>Žao nema je, soba je već zauzeta!</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Otkaži</value>
+  </data>
+  <data name="Cancel2" xml:space="preserve">
+    <value>OTKAŽI</value>
+  </data>
+  <data name="CanceledReservation" xml:space="preserve">
+    <value>Vaša rezervacija je uspješno otkazana!</value>
+  </data>
+  <data name="Capacity" xml:space="preserve">
+    <value>Kapacitet</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>KATEGORIJE</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategorija</value>
+  </data>
+  <data name="CategoryExist" xml:space="preserve">
+    <value>Kategorija već postoji!</value>
+  </data>
+  <data name="CategoryName" xml:space="preserve">
+    <value>Naziv kategorije</value>
+  </data>
+  <data name="DarkMode" xml:space="preserve">
+    <value>Tamna tema</value>
+  </data>
+  <data name="DarkTheme" xml:space="preserve">
+    <value>Tamna tema</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Datum:</value>
+  </data>
+  <data name="DateFormat" xml:space="preserve">
+    <value>Molimo Vas unesite validan format datuma!</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>OBRIŠI</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="Discover" xml:space="preserve">
+    <value>OTKRIJTE</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="End" xml:space="preserve">
+    <value>Datum odjave</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>Engleski</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Izađi</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Ime</value>
+  </data>
+  <data name="GuestID" xml:space="preserve">
+    <value>JMB</value>
+  </data>
+  <data name="GuestID2" xml:space="preserve">
+    <value>JMB</value>
+  </data>
+  <data name="GuestInformation" xml:space="preserve">
+    <value>Informacije o profilu</value>
+  </data>
+  <data name="GuestName" xml:space="preserve">
+    <value>Ime gosta:</value>
+  </data>
+  <data name="Guests" xml:space="preserve">
+    <value>GOSTI</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>POČETNA</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Identifikator rezervacije</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Informacije o rezervaciji</value>
+  </data>
+  <data name="Jmb" xml:space="preserve">
+    <value>JMB</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Engleski</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Prezime</value>
+  </data>
+  <data name="LightTheme" xml:space="preserve">
+    <value>Svijetla tema</value>
+  </data>
+  <data name="loginBtn" xml:space="preserve">
+    <value>PRIJAVITE SE</value>
+  </data>
+  <data name="MaxGuestCapacity" xml:space="preserve">
+    <value>Kapacitet</value>
+  </data>
+  <data name="NoInternetConnection" xml:space="preserve">
+    <value>Nema internet konekcije</value>
+  </data>
+  <data name="NotMatch" xml:space="preserve">
+    <value>Lozinke se ne poklapaju!</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Lozinka</value>
+  </data>
+  <data name="Password2" xml:space="preserve">
+    <value>Ponovite lozinku</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Cijena</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Vaš profil je uspješno kreiran!</value>
+  </data>
+  <data name="ReceptionistName" xml:space="preserve">
+    <value>Ime recepcionera:</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>OSVJEŽI</value>
+  </data>
+  <data name="Req" xml:space="preserve">
+    <value>Obavezno*</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>Sva obavezna polja moraju biti unesena!</value>
+  </data>
+  <data name="Reservaions" xml:space="preserve">
+    <value>REZERVACIJE</value>
+  </data>
+  <data name="ReservationID" xml:space="preserve">
+    <value>Identifikator rezervacije</value>
+  </data>
+  <data name="Reservations" xml:space="preserve">
+    <value>REZERVACIJE</value>
+  </data>
+  <data name="RoomInformation" xml:space="preserve">
+    <value>Informacije o sobi</value>
+  </data>
+  <data name="RoomInserted" xml:space="preserve">
+    <value>Soba je uspješno dodana!</value>
+  </data>
+  <data name="RoomName" xml:space="preserve">
+    <value>Naziv sobe:</value>
+  </data>
+  <data name="RoomName2" xml:space="preserve">
+    <value>Naziv sobe</value>
+  </data>
+  <data name="Rooms" xml:space="preserve">
+    <value>SOBE</value>
+  </data>
+  <data name="Rooms2" xml:space="preserve">
+    <value>Sobe</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Pretraga</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Molimo Vas izaberite prvo jednu od stavki!</value>
+  </data>
+  <data name="Serbian" xml:space="preserve">
+    <value>Srpski</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Potvrdi</value>
+  </data>
+  <data name="signUpBtn" xml:space="preserve">
+    <value>Kreirajte korisnički račun</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Datum prijave</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Potvrdi</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Ukupan iznos:</value>
+  </data>
+  <data name="txtPassword" xml:space="preserve">
+    <value>Unesite lozinku</value>
+  </data>
+  <data name="txtUserName" xml:space="preserve">
+    <value>Unesite korisničko ime</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>AŽURIRAJ</value>
+  </data>
+  <data name="Update2" xml:space="preserve">
+    <value>Ažuriraj</value>
+  </data>
+  <data name="UpdatedProfile" xml:space="preserve">
+    <value>Profil je uspješno ažuriran!</value>
+  </data>
+  <data name="UpdatedRoom" xml:space="preserve">
+    <value>Soba je uspješno ažurirana!</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Korisničko ime</value>
+  </data>
+  <data name="welcome" xml:space="preserve">
+    <value>Dobro došli!</value>
+  </data>
+  <data name="welcome2" xml:space="preserve">
+    <value>Prijavite se na svoj račun</value>
+  </data>
+  <data name="WrongInfo" xml:space="preserve">
+    <value>Pogrešno korisničko ime ili lozinka!</value>
+  </data>
+</root>

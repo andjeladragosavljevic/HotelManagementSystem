@@ -1,0 +1,123 @@
+﻿<Window x:Class="ProjekatB.UpdateProfile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatB"
+        xmlns:lex="http://wpflocalizeextension.codeplex.com"
+        lex:LocalizeDictionary.DesignCulture="sr"
+        lex:ResxLocalizationProvider.DefaultAssembly="ProjekatB"
+        lex:ResxLocalizationProvider.DefaultDictionary="Strings"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        x:Name="wind"
+        Height="700" Width="496">
+    <StackPanel Grid.IsSharedSizeScope="True">
+        <Grid Background="#FFFFFF" Margin="20 10" MaxWidth="600">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto" SharedSizeGroup="A"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0"
+                FontFamily="Montserrat"
+                   Text="{lex:Loc GuestInformation}"
+                   FontSize="30"
+                   Margin="0 25 0 0"
+                   />
+            <Grid Grid.Row="1" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc FirstName}" FontSize="18"/>
+                <TextBox BorderBrush="DarkGray" BorderThickness="0 0 0 1" x:Name="firstnameTxtBox" Grid.Row="1"
+                     Margin="0 5 0 0"
+                        
+                    />
+            </Grid>
+            <Grid Grid.Row="2" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc LastName}" FontSize="18"/>
+                <TextBox BorderBrush="DarkGray" BorderThickness="0 0 0 1" x:Name="lastnameTxtBox" Grid.Row="1"
+                     Margin="0 5 0 0"
+              
+                    />
+            </Grid>
+            <Grid Grid.Row="3" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc GuestID}" FontSize="18"/>
+                <TextBox BorderBrush="DarkGray" BorderThickness="0 0 0 1"  x:Name="jmbTxtBox" Grid.Row="1"
+                     Margin="0 5 0 0"
+              
+                    />
+            </Grid>
+            <Grid Grid.Row="4" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc Email}" FontSize="18"/>
+                <TextBox BorderBrush="DarkGray" BorderThickness="0 0 0 1" x:Name="emailTxtBox" Grid.Row="1"
+                     Margin="0 5 0 0"
+              
+                    />
+            </Grid>
+            <Grid Grid.Row="5" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="26.943"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc Username}" FontSize="18"/>
+                <TextBox BorderBrush="DarkGray" BorderThickness="0 0 0 1" x:Name="txtUsername" Grid.Row="1"
+                     Margin="0 5 0 0"
+              
+                    />
+            </Grid>
+            <Grid Grid.Row="6" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc Password}" FontSize="18"/>
+                <PasswordBox BorderBrush="DarkGray" BorderThickness="0 0 0 1" x:Name="txtPassword" Grid.Row="1"
+                     Margin="0 5 0 0"
+              
+                    />
+            </Grid>
+            <Grid Grid.Row="7" Margin="0 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock FontFamily="Montserrat" Grid.Row="0" Margin="0 5 0 0" Text="{lex:Loc Password2}" FontSize="18"/>
+                <PasswordBox BorderBrush="DarkGray" BorderThickness="0 0 0 1"  x:Name="txtRepeatPassword" Grid.Row="1"
+                     Margin="0 5 0 0"
+              
+                    />
+            </Grid>
+            <StackPanel Grid.Row="8" Orientation="Horizontal" Margin="0 25 0 0">
+                <Button Name="btn_submit" Click="btn_signeUp_Click"
+                        FontFamily="Montserrat"  Content="{lex:Loc Update2}"/>
+                <Button Click ="Delete_click" FontFamily="Montserrat" Margin="15 0 0 0" Content="{lex:Loc Cancel}"/>
+
+            </StackPanel>
+
+        </Grid>
+
+    </StackPanel>
+
+
+</Window>
