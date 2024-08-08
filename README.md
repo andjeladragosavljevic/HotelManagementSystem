@@ -78,5 +78,6 @@
 
 ## **Screenshots**
 
-![Main Window](path/to/screenshot.png)
-![Settings Menu](path/to/another_screenshot.png)
+![Main Window](https://github.com/andjeladragosavljevic/ProjekatB/blob/master/MainWindow.png)
+![Settings Menu](https://github.com/andjeladragosavljevic/ProjekatB/blob/master/SettingsMenu.png)
+![Login](https://github.com/andjeladragosavljevic/ProjekatB/blob/master/Login.png)
