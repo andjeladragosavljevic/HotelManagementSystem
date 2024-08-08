@@ -2,7 +2,7 @@
 
 ## **Project Overview**
 
-**Novi Naziv Projekta** is a hotel management system with functionalities for employees and guests. The system includes reservation management, room categorization, and guest management. The application supports three themes (dark, light, blue) and two languages (English, Serbian).
+**HotelManagementSystem** is a hotel management system with functionalities for employees and guests. The system includes reservation management, room categorization, and guest management. The application supports three themes (dark, light, blue) and two languages (English, Serbian).
 
 ## **Projects**
 
